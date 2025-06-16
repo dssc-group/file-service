@@ -1,0 +1,29 @@
+#启动端口设置
+server:
+  port: 8082
+
+#数据库配置
+spring:
+  redis:
+    host: ${REDIS_HOME:localhost}
+    port: ${REDIS_PORT:6379}
+    database: 0
+
+  servlet:
+    multipart:
+      max-file-size: 100GB
+      max-request-size: 10000GB
+
+
+minio:
+  rootUser: ${MINIO_ROOT_USER:xiongzihua}
+  rootPassword: ${MINIO_ROOT_PASSWORD:xzh_215213}
+  endpoint: ${MINIO_ENDPOINT:http://localhost:9000}
+
+
+
+#Mybatis配置
+#mybatis:
+#  configuration:
+#    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+#    map-underscore-to-camel-case: true
